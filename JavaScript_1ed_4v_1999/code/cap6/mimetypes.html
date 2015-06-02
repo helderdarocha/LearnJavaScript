@@ -1,0 +1,48 @@
+<html>
+
+<HEAD> <TITLE>TypeOf</TITLE>
+<script>
+function Circulo(x, y, r) {      // função "construtora"
+   this.x = x; // definição das propriedades deste objeto
+   this.y = y; // a referência this é ponteiro para o próprio objeto
+   this.r = r;
+}
+function Alvo(circ) {
+   this.circ = circ;
+}
+</script>
+</HEAD>
+
+<BODY>
+<script>  
+document.writeln("<TABLE BORDER=1><TR VALIGN=TOP>",
+   "<TH ALIGN=left>i",
+   "<TH ALIGN=left>type",
+   "<TH ALIGN=left>description",
+   "<TH ALIGN=left>suffixes",
+   "<TH ALIGN=left>enabledPlugin.name</TR>")
+for (i=0; i < navigator.mimeTypes.length; i++) {
+   document.writeln("<TR VALIGN=TOP><TD>",i,
+      "<TD>",navigator.mimeTypes[i].type,
+      "<TD>",navigator.mimeTypes[i].description,
+      "<TD>",navigator.mimeTypes[i].suffixes)
+   if (navigator.mimeTypes[i].enabledPlugin==null) {
+      document.writeln(
+      "<TD>None",
+      "</TR>")
+   } else {
+      document.writeln(
+      "<TD>",navigator.mimeTypes[i].enabledPlugin.name,
+      "</TR>")
+   }
+}             
+document.writeln("</TABLE>")
+document.write("<p>" + navigator.userAgent);
+document.write("<p>" + navigator.appCodeName);
+document.write("<p>" + navigator.appVersion);
+document.write("<p>" + navigator.appName);
+</script>
+</BODY>
+
+
+</html>

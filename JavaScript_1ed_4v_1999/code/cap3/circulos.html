@@ -1,0 +1,30 @@
+<html>
+
+<HEAD> <TITLE>Circulos</TITLE>
+<script>
+function Circulo(x, y, r) {      // função "construtora"
+   this.x = x; // definição das propriedades deste objeto
+   this.y = y; // a referência this é ponteiro para o próprio objeto
+   this.r = r;
+}
+</script>
+</HEAD>
+
+<BODY>
+<h1>Circulos</h1>
+<script>
+c1 = new Circulo(2,2,5);   // uso da função construtora
+c2 = new Circulo(0,0,4); // para criar dois circulos
+
+c2.x = 1;    // definicao de propriedades ...usando o operador "."
+c2["y"] = 2;    // ... usando o vetor associativo
+
+// uso de propriedades
+document.write("<P>c1: raio = " + c1.r + " (" + c1.x + "," + c1.y + ")");
+document.write("<P>c2: raio = " + c2.r + " (" + c2.x + "," + c2.y + ")");
+</script>
+
+</BODY>
+
+
+</html>

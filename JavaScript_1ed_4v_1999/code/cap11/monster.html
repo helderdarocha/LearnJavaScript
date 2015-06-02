@@ -1,0 +1,94 @@
+<html>
+<head>
+<title>Cookie Test</title>
+
+<script language="JavaScript">
+<!--
+  function setCookie(name, value, expires) { // define um cookie qualquer
+      document.cookie = name + "=" + value + ";" + " expires=" + expires;
+  }
+
+  function cadastra(ident, valor, vence) { // usa um cookie para lembrar nome de usuario
+      if(valor == "") { // verifica se usuario digitou alguma coisa
+          alert("Você não digitou seu Nome!");
+          document.formulario.nome.focus();
+          document.formulario.nome.select();
+      } else {
+          setCookie(ident, valor, vence);
+      }
+  }
+// -->
+</script>
+
+</head>
+
+<body bgcolor="#ffffff">
+
+
+<script language="JavaScript">
+<!-- // Verifica se ha um cookie e caso positivo, recupera o seu conteudo
+    if (document.cookie) {
+       index = document.cookie.indexOf("Visitante");
+       start = document.cookie.indexOf("=", index);
+       end = document.cookie.indexOf(";", index);
+       if (end == -1) {
+          end = document.cookie.length;
+       }
+       usuario = document.cookie.substring(start + 1, end); // isola o nome do usuario
+
+       // escreve na pagina HTML (pode colocar qq. HTML aqui, como blink, marquee, font...)
+       document.writeln("<h3 align=center><font face='verdana'>Seja bem vindo, <font color='#800000'>" + usuario + "</font>! à</font></h3>");
+    }
+// -->
+</script>
+
+<h1 align=center><font face="verdana">Home Page do Cookie Monster</font></h1>
+<hr>
+<p><font face="verdana" size="-1">
+Ed hassi ad intendere questo, che un principe, e massime un principe nuovo, non può osservare tutte quelle cose per le quale gli uomini sono tenuti buoni, essendo spesso necessitato per mantenere lo stato operare contro alla fede, contro alla carità, contro alla umanità, contro alla religione. E però bisogna che egli abbia un animo disposto a volgersi secondo che i venti e le variazioni della fortuna gli commandono; e come di sopra dissi, non partirsi dal bene potendo, ma sapere entrare nel mal necessitato... 
+</font>
+<p><font face="verdana" size="-1">
+Ma è necessario questa natura saperla bene colorire, ed essere gran simulatore e dissimulatore, e sono tanto semplici gli uomini, e tanto ubbidiscono alle necessità presenti, che colui che inganna troverà sempre chi si lascerà ingannare. Ad un principe adunque non è necessario avere in fatto tutte le soprascritte qualità, ma è ben necessario parer di averle. Anzi ardirò di dire questo, che avendole ed osservandole sempre, sono dannose; e parendo d'averle, sono utilili; come parer pietoso, fidele, umano, religioso, intero, ed essere, ma stare in modo edificato con l'animo che bisognando non essere, tu possa e sappia mutare il contrario. 
+</font>
+<p><font face="verdana" size="-1">
+<script language="JavaScript">
+     if (!document.cookie) {
+        document.write("<p>Se você voltar a esta página, usando o mesmo browser ");
+        document.write("e mesma máquina em qualquer dia no ");
+        document.write("futuro até Primeiro de Janeiro de 1998, está página ");
+        document.write("lembrará de você e do nome que você ");
+        document.write("digitar agora. Este texto só aparece porque é a <b>primeira ");
+        document.write("vez</b> que você entra nesta página ");
+        document.write("ou porque você removeu seu nome do registro (cookie).");
+     }
+</script>
+</font>
+
+
+<div align=center><p><table border=0 cellpadding=5 bgcolor="#ffffdd"><tr><td><font face="Arial" size="-1">
+
+<script language="JavaScript">
+<!-- // Entra ou sai do cadastro (cria ou apaga um cookie).       
+     ident = "Visitante";
+     expiration = "Thursday, 01-Jan-98 12:00:00"; // vence no inicio do proximo ano
+     erase = "Thursday, 01-Jan-97 12:00:00" // vencido (para apagar o cookie)
+
+     if (!document.cookie) { // se nao existe cookie, pode criar um
+        document.write("<b>Você não se cadastrou ainda na minha página?</b><br>");
+        document.write("<form name=formulario><p>Digite seu Nome: ");
+        document.write("<input type=text name=nome>");
+        document.write("<input type=submit value=Envia onClick='cadastra(ident, document.formulario.nome.value, expiration)'>");
+        document.write("</form>");
+     } else { // se existe, pode apaga-lo
+        document.write("<form name='caifora'>");
+        document.write("Para tirar seu nome do cadastro ");
+        document.write("<input type=button value='Clique Aqui!' onClick='setCookie(ident, usuario, erase)'>");
+        document.write("</form>");
+     }
+// -->
+</script>
+
+</font></td><tr></table></div>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<HTML><HEAD>
+<SCRIPT>
+function Endereco(url) {	// função para definir metodo
+   return "<OPTION VALUE='" + url + "'>" + this.toString()+ "</OPTION>";
+}
+String.prototype.endereco = Endereco; // cria método novo: endereco()
+</SCRIPT>
+</HEAD>
+
+<BODY>
+
+<FORM>
+<h1>Exemplos: String</h1>
+<p>Opções:
+<SELECT ONCHANGE='location.href=this.options[this.selectedIndex].value'>
+<SCRIPT>
+
+escolha = "Escolha uma organização";
+wwf = "World Wildlife Fund";		// ambos objetos do tipo String
+w3c = "World Wide Web Consortium";
+
+document.write( escolha.endereco(document.location) );
+document.write( wwf.endereco("http://www.wwf.org") );
+document.write( w3c.endereco("http://www.w3c.org") );
+
+</SCRIPT>
+</SELECT>
+</FORM>
+
+</BODY></HTML>

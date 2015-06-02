@@ -1,0 +1,447 @@
+<!-- This document was created with HomeSite 2.5 -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>I JOB: Inscrição</TITLE>
+   <style><!--
+      body, td, p, ul, li, ol
+          {font-size: 10pt;
+           font-family: Tahoma, Sans-serif;}
+   a        {text-decoration: none;}
+   .texto    {font-size: 10pt;
+           font-family: Tahoma, Sans-serif;
+           line-height: 15pt;}
+   .apres    {font-size: 10pt;
+           margin-top: 0pt;
+           text-indent: 1 cm;
+           font-family: Tahoma, Sans-serif;}
+   h1     {font-size: 16pt; font-weight: normal;
+           color: 000080;
+           font-family: Tahoma, Sans-serif;}
+   h2     {font-size: 12pt; font-weight: normal;
+           color: 800000;
+           font-family: Tahoma, Sans-serif;}
+   h3     {font-size: 10pt; font-weight: normal;
+           color: 000080;
+           font-family: Tahoma, Sans-serif;}
+   .onepix   {border-width: 1pt;}
+   .IHateMSIE3 {line-height: 20px;}
+   .primo   {font-family: Tahoma, Sans-serif;
+           font-size: 10pt;
+           margin-top: 0pt;}
+    input, select  {font-size: 10pt;}
+   .IHateMSIE3 {line-height: 20px;}
+   --></style>
+   <script language=JavaScript>
+   <!--
+   
+   browser = navigator.appName;
+   version = parseInt(navigator.appVersion);
+   var w1;
+   function enviar(dados) {
+      total = 0;
+      nome = dados.Nome.value;
+      empresa = dados.Empresa.value;
+      endereco = dados.Endereco.value;
+      bairro = dados.Bairro.value;
+      cep = dados.CEP.value;
+      cidade = dados.Cidade.value;
+      uf = dados.UF.options[dados.UF.selectedIndex].text;
+      tel = dados.Telefone.value;
+      fax = dados.Fax.value;
+      email = dados.Email.value;
+      resp = dados.Responsavel.value;
+      telResp = dados.FoneResp.value;
+      faxResp = dados.FaxResp.value;
+	  comoSoube = dados.ComoSoube.value;
+      mini1 = dados.Opcao_1.options[dados.Opcao_1.selectedIndex].text;
+      mini2 = dados.Opcao_2.options[dados.Opcao_2.selectedIndex].text;
+      mini3 = dados.Opcao_3.options[dados.Opcao_3.selectedIndex].text;
+      soCong = "Participação no Congresso: <br>dia 10 de novembro";
+      soPesq = "Participação na apresentação dos Centros de Pesquisa: <br>dia 11 de novembro";
+      soApli = "Participação no Laboratório de Aplicações: <br>dia 12 de novembro";
+      tudo = "Participação em todo o JOB 1\', de 9 a 12 de novembro";
+      
+      if (w1 != null && version > 3) {
+         w1.focus();
+      } else w1 = open("", "valida");
+      
+      w1.document.open();
+      w1.document.write("<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 3.2 Final//EN'>");
+      w1.document.write("");
+      w1.document.write("<html><head>\n<title>Confirma Inscrição?</title>\n");
+      w1.document.write("<style>\n");
+      w1.document.write("body, td, p {font-family: Tahoma, Sans-serif;font-size: 10pt;}\n");
+      w1.document.write("h1 {font-family: Tahoma, Sans-serif;font-size: 16pt;font-weight: 400;color: 000080;}\n");
+      w1.document.write(".onepix  {border-width: 1pt;}\n.IHateMSIE3  {line-height: 20px;}\n");
+      w1.document.write("//</style>\n");
+      w1.document.write("</head>\n<body bgcolor=white>\n");
+      w1.document.write("<h1 class=job align=right><IMG SRC='job150.gif' WIDTH=150 HEIGHT=57 BORDER=0 align=left alt='Java Open Brasil 1998'>\n");
+      w1.document.write("<span class=onepix>INSCRIÇÃO</span><br clear=all></h1>\n");
+      w1.document.write("<span class='IHateMSIE3'>&nbsp;</span> <!-- MSIE 3 CSS bug fix -->\n");
+      w1.document.write("<h1 align=center>Confira os dados de sua inscrição</h1>");
+      w1.document.write("<form action='/cgi-local/inscricao.pl' onsubmit='opener.location.href=\"index.html\"'>\n");
+      w1.document.write("<div align=center><table border width=75%>\n");
+      w1.document.write("<tr><td bgcolor=navy colspan=2 align=center><font color=white><B>Dados Pessoais</B></font></td></tr>");
+      w1.document.write("<tr><td><b>Nome:</b></td><td>" + nome + "</td></tr>\n");
+      w1.document.write("<tr><td><b>Empresa:</b></td><td>" + empresa + "</td></tr>\n");
+      w1.document.write("<tr><td><b>Endereço:</b></td><td>" + endereco + "</td></tr>\n");
+      w1.document.write("<tr><td><b>CEP:</b></td><td>" + cep + "</td></tr>\n");
+      w1.document.write("<tr><td><b>Bairro:</b></td><td>" + bairro + "</td></tr>\n");
+      w1.document.write("<tr><td><b>Cidade:</b></td><td>" + cidade + "</td></tr>\n");
+      w1.document.write("<tr><td><b>Estado:</b></td><td>" + uf + "</td></tr>\n");
+      w1.document.write("<tr><td><b>Telefone:</b></td><td>" + tel + "</td></tr>\n");
+      w1.document.write("<tr><td><b>Fax:</b></td><td>" + fax + "</td></tr>\n");
+      w1.document.write("<tr><td><b>E-mail:</b></td><td>" + email + "</td></tr>\n");
+      w1.document.write("<tr><td><b>Responsável:</b></td><td>" + resp + "</td></tr>\n");
+      w1.document.write("<tr><td><b>Telefone do Responsável:</b></td><td>" + telResp + "</td></tr>\n");
+      w1.document.write("<tr><td><b>Fax do Responsável:</b></td><td>" + faxResp + "</td></tr>\n");
+      if (dados.Opcao_1.selectedIndex != 0) {
+         w1.document.write("<tr><td bgcolor=navy colspan=2 align=center><font color=white><b>Opções de Minicursos</b></font></td></tr>");
+         w1.document.write("<tr><td><b>Minicurso escolhido:</b></td><td>" + mini1 + "</td></tr>\n");
+         if (dados.Opcao_2.selectedIndex != 0) {
+            w1.document.write("<tr><td><b><i>2a. opção:</i></b></td><td>" + mini2 + "</td></tr>\n");
+         }
+         if (dados.Opcao_3.selectedIndex != 0) {
+            w1.document.write("<tr><td><b><i>3a. opcao:</i></b></td><td>" + mini3 + "</td></tr>\n");
+         }
+         total += 170.00;
+      }
+      if (dados.Tudo.checked) {
+         w1.document.write("<tr><td bgcolor=navy colspan=2 align=center><font color=white><b>Forma de Participação</b></font></td></tr>");
+         w1.document.write("<tr><td colspan=2 align=center><B>" + tudo + "</B></td></tr>\n");
+         total = 450.00;
+      } else {
+         w1.document.write("<tr><td bgcolor=navy colspan=2 align=center><font color=white><b>Forma de Participação</b></font></td></tr>");
+         if (dados.Congresso.checked) {
+            w1.document.write("<tr><td colspan=2 align=center><B>" + soCong + "</B></td></tr>\n");
+            total += 160;
+         } 
+         if (dados.Laboratorios.checked) {
+            w1.document.write("<tr><td colspan=2 align=center><B>" + soApli + "</B></td></tr>\n");
+            total += 160;
+         } 
+         if (dados.Centros.checked) {
+            w1.document.write("<tr><td colspan=2 align=center><B>" + soPesq + "</B></td></tr>\n");
+            total += 110;
+         }
+         if (!dados.Centros.checked && !dados.Laboratorios.checked && !dados.Centros.checked && dados.Opcao_1.selectedIndex != 0) {
+            w1.document.write("<tr><td colspan=2 align=center><B>Somente Minicurso</B></td></tr>\n");
+         }
+      }
+
+      w1.document.write("<tr><td bgcolor=red colspan=2><image src='redpixel.gif' height=1 width=1></td></tr>");
+      w1.document.write("<tr><td><b>Total do Investimento:</b></td><td align=right> <b>R$" + total + ",00</b></td></tr>");
+      w1.document.write("</table></div>\n");
+      
+      w1.document.write("<input type=hidden name=01_Nome value='" + nome + "'>\n");
+      w1.document.write("<input type=hidden name=02_Empresa value='" + empresa + "'>\n");
+      w1.document.write("<input type=hidden name=03_Endereco value='" + endereco + "'>\n");
+      w1.document.write("<input type=hidden name=04_CEP value='" + cep + "'>\n");
+      w1.document.write("<input type=hidden name=05_Bairro value='" + bairro + "'>\n");
+      w1.document.write("<input type=hidden name=06_Cidade value='" + cidade + "'>\n");
+      w1.document.write("<input type=hidden name=07_Estado value='" + uf + "'>\n");
+      w1.document.write("<input type=hidden name=08_Telefone value='" + tel + "'>\n");
+      w1.document.write("<input type=hidden name=09_Fax value='" + fax + "'>\n");
+      w1.document.write("<input type=hidden name=10_E-mail value='" + email + "'>\n");
+      w1.document.write("<input type=hidden name=11_Responsavel value='" + resp + "'>\n");
+      w1.document.write("<input type=hidden name=12_Tel_do_Responsavel value='" + telResp + "'>\n");
+      w1.document.write("<input type=hidden name=13_Fax_do_Responsavel value='" + faxResp + "'>\n");
+	  if (dados.Opcao_1.selectedIndex != 0) {
+      	w1.document.write("<input type=hidden name=14_Minicurso_Escolhido value='" + mini1 + "'>\n");
+	  }
+	  if (dados.Opcao_2.selectedIndex != 0) {
+      	w1.document.write("<input type=hidden name=15_Minicurso_2a_opcao value='" + mini2 + "'>\n");
+	  }
+	  if (dados.Opcao_3.selectedIndex != 0) {
+      	w1.document.write("<input type=hidden name=16_Minicurso_3a_opcao value='" + mini3 + "'>\n");
+	  }
+	  if (dados.Congresso.checked) {
+      	 w1.document.write("<input type=hidden name=17a_Somente_Congresso_dia10 value='CONFIRMADA a participacao no dia 10 - Congresso'>\n");
+	  }
+	  if (dados.Laboratorios.checked) {
+      	 w1.document.write("<input type=hidden name=17b_Somente_Aplicacoes_dia12 value='CONFIRMADA a participação no dia 12 - Lab. de Aplicacoes'>\n");
+      }
+	  if (dados.Centros.checked) {
+	  	 w1.document.write("<input type=hidden name=17c_Somente_Pesquisa_dia11 value='CONFIRMADA a participacao no dia 11 - Centros de Pesquisa'>\n");
+      }
+	  if (dados.Tudo.checked) {
+		 w1.document.write("<input type=hidden name=17_Todo_o_Job value='CONFIRMADA A PARTICIPACAO EM TODO O JOB'>\n");
+	  }
+	  w1.document.write("<input type=hidden name=18_Total_a_depositar value='R$ " + total + ",00'>\n");
+	  w1.document.write("<input type=hidden name=19_Estatisticas_Como_Soube_do_JOB value='"+ comoSoube +"'>\n");
+	  w1.document.write("<input type=hidden name=20_Estatisticas_Browser_Usado value='"+ browser + " " + version + "'>\n");
+      
+      w1.document.write("<input type=hidden name=redirect value='http://www.emana.com.br/job/obrigado.html'>\n");
+      w1.document.write("<input type=hidden name=recipient value='job@emana.com.br'>\n");
+      w1.document.write("<input type=hidden name=sort value='alphabetic'>\n");
+      w1.document.write("<input type=hidden name=subject value='Inscrição no JOB 1'>\n");
+      w1.document.write("<input type=hidden name=resposta value='reserva.txt'>\n");
+      
+      w1.document.write("<input type=hidden name=version value='"+ version +"'>\n");
+
+      w1.document.write("<div align=center><br><input type='submit' onclick='this.form.submit()' value='Inscrever-se'>\n");
+      w1.document.write("<input type=button value='Voltar e corrigir' onclick='if (parseInt(this.form.version.value) > 3) opener.focus(); close();'></div>\n");
+      w1.document.write("<p align=center style='color: red'>Se a sua inscrição for enviada ao servidor com sucesso, uma\n");
+      w1.document.write("página com o título \"Inscrição Enviada\" deve aparecer no seu browser, no lugar desta. Se isto\n");
+      w1.document.write("não acontecer, salve esta página em um diretório temporário, imprima e envie\n");
+      w1.document.write("por FAX para <B>(061) 327 3531</B>.</p>\n");
+
+
+       w1.document.write("</form></body></html>\n");
+      w1.document.close();
+      if (version > 3) {
+         w1.focus();
+      }
+
+   }
+   //-->
+   </script>
+</HEAD>
+
+<BODY>
+<BODY bgcolor=white>
+<table width=600 border=0 cellspacing=0 cellpadding=5><tr>
+
+<td width=150 bgcolor="#e6e6e6" valign=top align=center><a name="top"></a>
+
+<!-- side bar -->
+<p align=center class=side><a href="http://www.emana.com.br" target=frame2><IMG SRC="twa100.gif" WIDTH=100 HEIGHT=50 BORDER=0 alt="TWA-Conhecer"></a></p>
+
+<div align=center><table border=0 cellpadding=5><tr><td>
+<p align=center class=side>
+<A HREF="index.html"><IMG SRC="xicara.gif" WIDTH=100 HEIGHT=119 BORDER=0 alt="Volta para página inicial"></A>
+<table border=0 cellspacing=0 cellpadding=0>
+<tr class=sidebar><td>
+<A HREF="job_home.html"><IMG SRC="link_ixtop.gif" WIDTH=125 HEIGHT=28 BORDER=0 alt="Índices do site"></A></td></tr>
+<tr class=sidebar><td>
+<A HREF="job_home.html"><IMG SRC="link_ix_1.gif" WIDTH=125 HEIGHT=19 BORDER=0 alt="Home Page"></A></td></tr>
+<tr class=sidebar><td>
+<A HREF="job_apre.html"><IMG SRC="link_aptop.gif" WIDTH=125 HEIGHT=28 BORDER=0 alt="Apresentação"></A></td></tr>
+<tr class=sidebar><td>
+<A HREF="job_apre.html"><IMG SRC="link_ap_1.gif" WIDTH=125 HEIGHT=17 BORDER=0 alt="Apresentação JOB 1"></A></td></tr>
+<tr class=sidebar><td>
+<A HREF="imprensa.html"><IMG SRC="link_ap_2.gif" WIDTH=125 HEIGHT=18 BORDER=0 alt="Informes à Imprensa"></A></td></tr>
+<tr class=sidebar><td>
+<A HREF="job_news.html"><IMG SRC="link_ap_3.gif" WIDTH=125 HEIGHT=17 BORDER=0 alt="Informes à Imprensa"></A></td></tr>
+<tr class=sidebar><td>
+<A HREF="job_prog.html"><IMG SRC="link_prtop.gif" WIDTH=125 HEIGHT=26 BORDER=0 alt="Programa"></A></td></tr>
+<tr class=sidebar><td>
+<A HREF="job_prog.html"><IMG SRC="link_pr_1.gif" WIDTH=125 HEIGHT=16 BORDER=0 alt="Calendário"></A></td></tr>
+<tr class=sidebar><td>
+<A HREF="dia9.html"><IMG SRC="link_pr_2.gif" WIDTH=125 HEIGHT=17 BORDER=0 alt="Dia 09/nov: Minicursos"></A></td></tr>
+<tr class=sidebar><td>
+<A HREF="dia10.html"><IMG SRC="link_pr_3.gif" WIDTH=125 HEIGHT=16 BORDER=0 alt="Dia 10/nov: Congresso"></A></td></tr>
+<tr class=sidebar><td>
+<A HREF="dia11.html"><IMG SRC="link_pr_4.gif" WIDTH=125 HEIGHT=17 BORDER=0 alt="Dia 11/nov: Centros de Pesquisa"></A></td></tr>
+<tr class=sidebar><td>
+<A HREF="dia12.html"><IMG SRC="link_pr_5.gif" WIDTH=125 HEIGHT=16 BORDER=0 alt="Dia 12/nov: Lab. de Aplicações"></A></td></tr>
+<tr class=sidebar><td>
+<A HREF="salas.html"><IMG SRC="link_pr_6.gif" WIDTH=125 HEIGHT=16 BORDER=0 alt="Salas Abertas"></A></td></tr>
+<tr class=sidebar><td>
+<A HREF="job_coor.html"><IMG SRC="link_cotop.gif" WIDTH=125 HEIGHT=31 BORDER=0 alt="Coordenação"></A></td></tr>
+<tr class=sidebar><td>
+<A HREF="job_coor.html#coordenadores"><IMG SRC="link_co_1.gif" WIDTH=125 HEIGHT=16 BORDER=0 alt="Coordenação"></A></td></tr>
+<tr class=sidebar><td>
+<A HREF="job_coor.html#palestrantes"><IMG SRC="link_co_2.gif" WIDTH=125 HEIGHT=17 BORDER=0 alt="Coordenação"></A></td></tr>
+<tr class=sidebar><td>
+<A HREF="job_insc.html"><IMG SRC="link_intop.gif" WIDTH=125 HEIGHT=29 BORDER=0 alt="Inscrição"></A></td></tr>
+<tr class=sidebar><td>
+<A HREF="job_insc.html"><IMG SRC="link_in_1.gif" WIDTH=125 HEIGHT=16 BORDER=0 alt="Instruções"></A></td></tr>
+<tr class=sidebar><td>
+<A HREF="job_form.html"><IMG SRC="link_in_2.gif" WIDTH=125 HEIGHT=17 BORDER=0 alt="Formulário de Reserva"></A></td></tr>
+<tr class=sidebar><td>
+<A HREF="viagem.html"><IMG SRC="link_patop.gif" WIDTH=125 HEIGHT=28 BORDER=0 alt="Pacotes"></A></td></tr>
+<tr class=sidebar><td>
+<A HREF="viagem.html"><IMG SRC="link_pa_1.gif" WIDTH=125 HEIGHT=17 BORDER=0 alt="Tabela de Preços"></A></td></tr>
+<tr class=sidebar><td>
+<A HREF="voolivre.html"><IMG SRC="link_pa_2.gif" WIDTH=125 HEIGHT=17 BORDER=0 alt="Reserva de Hotel/Passagens"></A></td></tr>
+<!-- <tr class=sidebar><td>
+<A HREF=""><IMG SRC="link_lotop.gif" WIDTH=125 HEIGHT=28 BORDER=0 alt="Local do Evento"></A></td></tr>
+<tr class=sidebar><td>
+<A HREF=""><IMG SRC="link_lo_1.gif" WIDTH=125 HEIGHT=17 BORDER=0 alt="Brasília"></A></td></tr>
+<tr class=sidebar><td>
+<A HREF=""><IMG SRC="link_lo_2.gif" WIDTH=125 HEIGHT=19 BORDER=0 alt="Parlamundi"></A></td></tr>
+<tr class=sidebar><td>
+<A HREF=""><IMG SRC="link_catop.gif" WIDTH=125 HEIGHT=30 BORDER=0 alt="Cafeteria"></A></td></tr> --></table>
+</p>
+</td></tr></table></div>
+</td>
+
+<td width=450 bgcolor=white valign=top>
+<h1 class=job align=right><a href="index.html"><IMG SRC="job150.gif" WIDTH=150 HEIGHT=57 BORDER=0 align=left alt="Java Open Brasil 1998"></a>
+<span class=onepix>INSCRIÇÃO</span><br clear=all></h1>
+<span class="IHateMSIE3">&nbsp;</span> <!-- MSIE 3 CSS bug fix -->
+
+<form>
+
+<H1>FORMULÁRIO DE RESERVA</H1>
+
+<h2>Informações sobre o participante</h2> 
+
+<P align=left>Preencha o formulário abaixo (um para cada participante):</p>
+<p>
+<table bgcolor="#ffffbf" cellspacing=0 cellpadding=0 width=100%>
+<tr>
+<td width=10%></td>
+<td width=40%></td>
+<td width=10%></td>
+<td width=40%></td>
+</tr>
+<tr>
+<td colspan=4>Nome do participante<br>
+<input type=text size="36" name=Nome></td>
+<tr>
+<TD colspan=4>Empresa<br><input type=text name=Empresa size=36></TD>
+</tr>
+<tr>
+<TD colspan=4>Endereço<br><input type=text name=Endereco size=36></TD>
+</tr>
+<tr>
+<TD>CEP</TD> <TD><input type=text name=CEP size=10></TD>
+<TD>Bairro</TD> <TD><input type=text name=Bairro size=10></TD>
+</tr>
+<tr>
+<TD>Cidade</TD>  <TD><input type=text name=Cidade size=10></TD>
+<TD>Estado</TD>
+<TD><select name=UF size=1 >
+<option>AC</option>
+<option>AL</option>
+<option>AM</option>
+<option>AP</option>
+<option>BA</option>
+<option>CE</option>
+<option selected>DF</option>
+<option>ES</option>
+<option>GO</option>
+<option>MA</option>
+<option>MG</option>
+<option>MS</option>
+<option>MT</option>
+<option>PA</option>
+<option>PB</option>
+<option>PE</option>
+<option>PI</option>
+<option>PR</option>
+<option>RN</option>
+<option>RJ</option>
+<option>RO</option>
+<option>RR</option>
+<option>RS</option>
+<option>SE</option>
+<option>SP</option>
+<option>SC</option>
+<option>TO</option>
+</select></TD>
+</tr>
+<tr>
+<TD>Telefone</TD> <TD><input type=text name=Telefone size=10></TD>
+<TD>Fax</TD> <TD><input type=text name=Fax size=10></TD>
+</tr>
+<tr>
+<td>E-mail</td> <TD colspan=3><input type=text name=Email size=30></TD>
+</tr>
+<tr>
+<td colspan=4>Responsável pela Inscrição<br>
+<input type=text name=Responsavel size=35></td>
+</tr>
+<tr>
+<td>Fone</td><td><input type=text name=FoneResp size=10></td>
+<td>Fax</td><td><input type=text name=FaxResp size=10></td>
+</tr>
+</table>
+
+<p>Como você tomou conhecimento do JOB'1?
+<input type=text name="ComoSoube" size=30></p>
+
+<h2>Reserva para o curso / Investimento</h2> 
+<P><table border=1 width=100%><tr><td>
+<TABLE bgcolor="#bfbfff" border=0 cellspacing=0 cellpadding=0 width=100%>
+<TR>
+   <TD colspan=3><B>Dia   9/11/98 (2a feira)</B> - Selecione os minicursos abaixo
+   de acordo com a sua ordem de preferência. A segunda e terceira opções só
+   serão utilizadas caso não haja mais vagas no primeiro minicurso escolhido.</TD>
+</TR>
+<TR>
+   <td colspan=2><select name="Opcao_1">
+   <option selected>Escolha o minicurso que você deseja realizar</option>
+   <option>Minicurso 1 - Migrando de C/C++ para Java</option>
+   <option>Minicurso 2 - Usando Java em Ambientes Distribuídos</option>
+   <option>Minicurso 3 - Desenvolvimento em Java com JavaBeans&reg;</option>
+   </select></td>
+   <TD align=right><B>R$ 170,00</B></TD>
+</TR>
+<TR>
+   <td colspan=2><select name="Opcao_2">
+   <option selected>Escolha a sua segunda opção de minicurso</option>
+   <option>Minicurso 1 - Migrando de C/C++ para Java</option>
+   <option>Minicurso 2 - Usando Java em Ambientes Distribuídos</option>
+   <option>Minicurso 3 - Desenvolvimento em Java com JavaBeans&reg;</option>
+   </select></td>
+   <TD align=right><B>R$ 170,00</B></TD>
+</TR>
+<TR>
+   <td colspan=2><select name="Opcao_3">
+   <option selected>Escolha a sua terceira opção de minicurso</option>
+   <option>Minicurso 1 - Migrando de C/C++ para Java</option>
+   <option>Minicurso 2 - Usando Java em Ambientes Distribuídos</option>
+   <option>Minicurso 3 - Desenvolvimento em Java com JavaBeans&reg;</option>
+   </select></TD>
+   <TD align=right><B>R$ 170,00</B></TD>
+</TR>
+</table></tr></td></table></P>
+
+<P><table border=1 width=100%><tr><td>
+<table bgcolor="#bfffdf" border=0 cellspacing=0 cellpadding=0 width=100%><TR>
+   <TD colspan=3><B>Dia   10/11/98 (3a feira)</B></TD>
+</TR>
+<TR>
+   <td width=5%><input type=checkbox name="Congresso" value="sim"></td>
+   <TD>Congresso</TD>
+   <TD align=right><B>R$ 160,00</B></TD>
+</TR></table></tr></td></table>
+
+<table border=1 width=100%><tr><td>
+<table bgcolor="#bfffdf" border=0 cellspacing=0 cellpadding=0 width=100%><TR>
+   <TD colspan=3><B>Dia   11/11/98 (4a feira)</B></TD>
+</TR>
+<TR>
+   <td width=5%><input type=checkbox name="Centros" value="sim"></td>
+   <TD>Centros de Pesquisas</TD>
+   <TD align=right><B>R$ 110,00</B></TD>
+</TR></table></tr></td></table>
+
+<table border=1 width=100%><tr><td>
+<table bgcolor="#bfffdf" border=0 cellspacing=0 cellpadding=0 width=100%><TR>
+   <TD colspan=3><B>Dia   12/11/98 (5a feira)</B></TD>
+</TR>
+<TR>
+   <td width=5%><input type=checkbox name="Laboratorios" value="sim"></td>
+   <TD>Laboratório de Aplicações</TD>
+   <TD align=right><B>R$ 160,00</B></TD>
+</TR></table></tr></td></table></P>
+<p>
+<table border=1 width=100%><tr><td>
+<table bgcolor="#ffbfbf" border=0 cellspacing=0 cellpadding=0 width=100%><TR>
+   <td valign=top><input type=checkbox name="Tudo" value="sim"></td>
+   <TD><B>JOB 1' Completo (todos os dias)</B><br>
+   <font color=red>Não esqueça de selecionar um minicurso acima!</font></TD>
+   <TD align=right><B>R$ 450,00</B></TD>
+</TR>
+</TABLE></td></tr></table></p>
+
+<div align=center> 
+<input type=button value="Inscrever-se" onclick="enviar(this.form)">
+<input type=reset value="Corrigir">
+</div>
+</form>
+</td></tr>
+
+</td align=center></tr>
+<tr valign=bottom>
+<td bgcolor="e6e6e6"><A HREF="#top"><IMG SRC="menu.gif" WIDTH=50 HEIGHT=16 BORDER=0 alt="Rola a página para o menu"></A></td>
+<td>&nbsp;</td></tr></table>
+</BODY>
+</HTML>
+

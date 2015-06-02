@@ -1,0 +1,27 @@
+<html>
+<head>
+<script>
+var usuario = "[Jung] ";
+
+function abreDocs() {
+   parent.opener.parent.frames[0].document.open();
+   parent.frames[0].document.open();
+}
+
+function enviaMensagem(msg) {
+   parent.opener.parent.frames[0].document.write("<br><font color=red>" + usuario + msg + "</font>\n");
+   parent.frames[0].document.write("<br><font color=blue>" + usuario + msg + "</font>\n");
+
+}
+</script>
+</head>
+
+<body bgcolor=black text=white onload="abreDocs()">
+<form>
+<p>Mensagem:
+<input type=text name=mensagem>
+<input type=button value="Enviar" onclick="enviaMensagem(this.form.mensagem.value)">
+
+</form>
+</body>
+</html>

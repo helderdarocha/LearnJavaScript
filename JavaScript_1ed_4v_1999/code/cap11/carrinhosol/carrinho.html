@@ -1,0 +1,112 @@
+<!-- This document was created with HomeSite 2.5 -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>Seu carrinho de compras</TITLE>
+
+   <script>
+
+   function formata(numero) {
+      numStr = numero.toString();
+      dot = numStr.indexOf(".");
+      if (dot < 0) numStr += ".00";
+      else {
+         frac = parseInt(numStr.substring(dot+1, numStr.length));
+         frac *= 10;
+         fracStr = frac.toString();
+         fracStr = fracStr.substring(0,2);
+         numStr = numStr.substring(0,dot+1) + fracStr;
+      }
+      return numStr;
+   }
+
+   function getCookies() {
+      cookies = document.cookie.split("; ");
+      for (i = 0; i < cookies.length; i++) {
+         cookies[i] = cookies[i].split("=");
+         cookies[i][0] = unescape(cookies[i][0]); // nome
+         cookies[i][1] = unescape(cookies[i][1]); // valor
+      }
+      return cookies;
+   }
+   
+
+   function getCookie(name) {
+      cookies = getCookies();
+      for (i = 0; i < cookies.length; i++) {
+         if(cookies[i][0] == name) {
+            return cookies[i][1];      // valor
+         }
+      }
+      return null;
+   }  
+   
+   function setCookie(nome, valor, dias) {
+      diasms = (new Date()).getTime() + 1000 * 3600 * 24 * dias;  
+      dias = new Date(diasms);
+      expires = dias.toGMTString();
+      document.cookie = escape(nome) + "=" + escape(valor) + "; expires=" + expires;
+   }
+
+   function refresco() {
+      for(i = 0; i < document.forms[0].elements.length-2; i++) {
+         chkbox = document.forms[0].elements[i];
+         nome = document.forms[0].elements[i].name;
+         if(!chkbox.checked) {
+            setCookie(nome,"nada",-365); // mata
+         } 
+      }
+      location.reload(true);
+    }
+
+   function killAll() {
+      if (document.cookie) {
+         cooks = document.cookie.split("; ");
+         for (i=0; i < cooks.length; i++) {
+            nome = cooks[i].split("=");
+            setCookie(unescape(nome[0]), "aaa", -365); // mata
+         }
+      }
+   }
+
+   </script>
+
+</HEAD>
+
+<BODY>
+<h1 align=center>Carrinho de Compras</h1>
+<p>Para remover um produto, desmarque a caixa de
+checagem à esquerda do produto selecionado e
+aperte o botão <b>Atualizar</b>.
+<form>
+<div align=center><p align=center><table border><tr>
+<th>Seleção</th>
+<th>Código</th>
+<th>Produto</th>
+<th>Preço</th></tr>
+<script>
+if (!document.cookie) document.write("<tr><td colspan=3>Seu carrinho está vazio!</td></tr>");
+else {
+   cooks = getCookies();
+   total = 0;
+   for (i = 0; i < cooks.length; i++) {
+      partes = cooks[i][1].split("&"); // partes eh Array
+      total += parseFloat(partes[partes.length-1]);
+      partes = partes.join("</td><td>");  // agora partes eh String
+      partes = "</td><td>" + partes + "</td></tr>";
+      partes = "<tr><td><input type=checkbox name='"+cooks[i][0]+"' checked size=3>" + partes;
+      document.write(partes + "\n");
+   }
+   document.write("<tr><td colspan=4 align=right><b>TOTAL A PAGAR</b> R$" + formata(total) + "</td></tr>");
+}
+</script>
+</table>
+<p align=center>
+
+<input type=button onclick="refresco()" value="Atualizar">
+<input type=button onclick="killAll(); location.reload(true)" value="Esvaziar Carrinho"></p></div>
+<p align=center><A HREF="index.html">Voltar</A> | <A HREF="dinos.html">Dinossauros</A> | <A HREF="livros.html">Livros</A> | <A HREF="insetos.html">Invertebrados</A> | <A HREF="outros.html">Outros</A></p>
+</form>
+</BODY>
+</HTML>

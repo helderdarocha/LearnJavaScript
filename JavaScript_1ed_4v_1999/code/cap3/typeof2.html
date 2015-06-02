@@ -1,0 +1,123 @@
+<html>
+
+<HEAD> <TITLE>TypeOf</TITLE>
+<script>
+function Circulo(x, y, r) {      // função "construtora"
+   this.x = x; // definição das propriedades deste objeto
+   this.y = y; // a referência this é ponteiro para o próprio objeto
+   this.r = r;
+}
+function Alvo(circ) {
+   this.circ = circ;
+}
+</script>
+</HEAD>
+
+<BODY>
+<h1>Usando TypeOf</h1>                                                                     
+<a href="x.html">link</a>
+
+<script> 
+var coisa; 
+var outraCoisa = new Object();                      
+var texto = "Era uma vez...";    
+var numero = 13;                 
+var hoje = new Date();           
+var c = new Circulo(3, 4, 5);    
+var a = new Alvo(c);     
+document.write("<h2>Funções e variáveis existentes</h2>");
+document.write("<pre>function Circulo(x, y, r) {  \n");
+document.write("   this.x = x;                                    \n");
+document.write("   this.y = y;                                    \n");
+document.write("   this.r = r;                                    \n");
+document.write("}                                                 \n");
+document.write("function Alvo(circ) {                             \n");
+document.write("   this.circ = circ;                              \n");
+document.write("}                                                 \n\n");
+
+document.write("var coisa;                         \n");
+document.write("var outraCoisa = new Object();     \n");
+document.write("var texto = \"Era uma vez...\";    \n");
+document.write("var numero = 13;                   \n");
+document.write("var hoje = new Date();             \n");
+document.write("var c = new Circulo(3, 4, 5);      \n");      
+document.write("var a = new Alvo(c);         \n</pre>");
+
+document.write("<h2>Uso de TypeOf</h2>");
+      
+document.write("<h3>Variáveis e Literais</h3>");
+document.write("<pre><ul>");          
+document.write("<li>typeof coisa                 : <b>" +  typeof coisa                 +"</b>");
+document.write("<li>typeof outraCoisa            : <b>" +  typeof outraCoisa            +"</b>");
+document.write("<li>typeof semCoisa              : <b>" +  typeof semCoisa              +"</b>");
+document.write("<li>typeof texto                 : <b>" +  typeof texto                 +"</b>");
+document.write("<li>typeof numero                : <b>" +  typeof numero                +"</b>");
+document.write("<li>typeof hoje                  : <b>" +  typeof hoje                  +"</b>");
+document.write("<li>typeof c                     : <b>" +  typeof c                     +"</b>");
+document.write("<li>typeof a                     : <b>" +  typeof a                     +"</b>");
+document.write("<li>typeof true                  : <b>" +  typeof true                  +"</b>");
+document.write("<li>typeof null                  : <b>" +  typeof null                  +"</b>");
+document.write("<li>typeof 26                    : <b>" +  typeof 26                    +"</b>");
+document.write("<li>typeof 'Um, dois, três'      : <b>" +  typeof 'Um, dois, três'      +"</b>");
+
+document.write("</ul></pre><h3>Propriedades</h3><pre><ul>");
+document.write("<li>typeof a.circ.x              : <b>" +  typeof a.circ.x              +"</b>");
+document.write("<li>typeof a.circ                : <b>" +  typeof a.circ                +"</b>");
+document.write("<li>typeof window                : <b>" +  typeof window                +"</b>");
+document.write("<li>typeof window.location       : <b>" +  typeof window.location       +"</b>");
+document.write("<li>typeof document.location     : <b>" +  typeof document.location     +"</b>");
+document.write("<li>typeof document.links[0]     : <b>" +  typeof document.links[0]     +"</b>");
+document.write("<li>typeof document.location.href: <b>" +  typeof document.location.href+"</b>");
+document.write("<li>typeof document.links[0].href: <b>" +  typeof document.links[0].href+"</b>");
+document.write("<li>typeof document.lastModified : <b>" +  typeof document.lastModified +"</b>");
+document.write("<li>typeof texto.length          : <b>" +  typeof texto.length          +"</b>");
+document.write("<li>typeof Math.PI               : <b>" +  typeof Math.PI               +"</b>");
+
+document.write("</ul></pre><h3>Métodos e Funções</h3><pre><ul>");
+document.write("<li>typeof eval                  : <b>" +  typeof eval                  +"</b>");
+document.write("<li>typeof parseInt              : <b>" +  typeof parseInt              +"</b>");
+document.write("<li>typeof texto.charAt          : <b>" +  typeof texto.charAt          +"</b>");
+document.write("<li>typeof window.focus          : <b>" +  typeof window.focus          +"</b>");
+document.write("<li>typeof Math.sqrt             : <b>" +  typeof Math.sqrt             +"</b>");
+document.write("<li>typeof document.write        : <b>" +  typeof document.write        +"</b>");
+
+document.write("</ul></pre><h3>Construtores de Objetos</h3><pre><ul>");
+document.write("<li>typeof Circulo               : <b>" +  typeof Circulo               +"</b>");
+document.write("<li>typeof Date                  : <b>" +  typeof Date                  +"</b>");
+document.write("<li>typeof Array                 : <b>" +  typeof Array                 +"</b>");
+document.write("<li>typeof Math                  : <b>" +  typeof Math                  +"</b>");
+document.write("<li>typeof String                : <b>" +  typeof String                +"</b>");      
+document.write("<li>typeof Number                : <b>" +  typeof Number                +"</b>");
+document.write("<li>typeof Boolean               : <b>" +  typeof Boolean               +"</b>");
+document.write("<li>typeof Object                : <b>" +  typeof Object                +"</b>");  
+document.write("<li>typeof Function              : <b>" +  typeof Function              +"</b>");
+document.write("<li>typeof Window                : <b>" +  typeof Window                +"</b>");
+document.write("<li>typeof Navigator             : <b>" +  typeof Navigator             +"</b>");
+document.write("<li>typeof Document              : <b>" +  typeof Document              +"</b>");
+document.write("<li>typeof Location              : <b>" +  typeof Location              +"</b>");
+document.write("<li>typeof TextArea              : <b>" +  typeof TextArea              +"</b>");
+document.write("<li>typeof Select                : <b>" +  typeof Select                +"</b>");
+document.write("<li>typeof Option                : <b>" +  typeof Option                +"</b>");
+document.write("<li>typeof History               : <b>" +  typeof History               +"</b>");
+
+document.write("</ul></pre><h3>Nomes dos Construtores de Objetos</h3><pre><ul>");
+document.write("<li>c.constructor                : <b>" +  c.constructor.name           +"</b>");
+document.write("<li>hoje.constructor.name        : <b>" +  hoje.constructor.name        +"</b>");
+document.write("<li>window.constructor.name      : <b>" +  window.constructor.name      +"</b>");
+document.write("<li>document.constructor.name    : <b>" +  document.constructor.name    +"</b>");
+document.write("<li>history.constructor.name     : <b>" +  history.constructor.name     +"</b>");
+document.write("<li>texto.constructor.name       : <b>" +  texto.constructor.name       +"</b>");
+document.write("<li>numero.constructor.name      : <b>" +  numero.constructor.name      +"</b>");
+document.write("<li>Math.constructor.name        : <b>" +  Math.constructor.name        +"</b>");
+document.write("<li>Function.constructor.name    : <b>" +  Function.constructor.name    +"</b>");
+document.write("<li>Number.constructor.name      : <b>" +  Number.constructor.name    +"</b>");
+document.write("<li>document.links[0].constructor.name: <b>" + document.links[0].constructor.name +"</b>");
+document.write("</ul></pre>");                                                               
+                                                                                
+</script>   
+
+
+</BODY>
+
+
+</html>

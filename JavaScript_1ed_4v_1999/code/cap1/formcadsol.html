@@ -1,0 +1,45 @@
+<!-- This document was created with HomeSite 2.5 -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>Inscrição</TITLE>
+   <script>
+   
+   var nome;
+   var email;
+   var num = 0;
+   
+   function escrever(quadro) {
+      info = "Usuário número " + (++num) + "\n";
+      info += "Nome: " + nome + "\n";
+      info += "E-mail: " + email + "\n\n";
+      quadro.value += info;
+   }
+
+   </script>
+</head>
+
+<body bgcolor=white>
+<form>
+
+<h2 align=center>Cadastro</h2>
+
+<div align=center>
+<script>
+   hoje = new Date();
+   dia = hoje.getDate();
+   mes = hoje.getMonth() + 1;
+   ano = hoje.getYear() + 1900;
+   document.write("<h3>Hoje: " + dia + "/" + mes + "/" + ano + "</h3>");
+</script>
+<p><input type=button value="Digitar Nome" onclick="nome=prompt('Seu Nome', '')">
+<input type=button value="Digitar E-mail" onclick="email=prompt('Email', '')">
+<input type=button value="Cadastrar" onclick="escrever(this.form.Area)">
+<p><textarea rows=10 cols=40 name=Area></textarea>
+</div>
+</form>
+
+</body>
+</html>
+

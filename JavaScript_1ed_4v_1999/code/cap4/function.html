@@ -1,0 +1,54 @@
+<html>
+
+<HEAD> <TITLE>Function</TITLE>
+<script>
+function Circulo(x, y, r) {      // função "construtora"
+   this.x = x; // definição das propriedades deste objeto
+   this.y = y; // a referência this é ponteiro para o próprio objeto
+   this.r = r;
+}
+function Alvo(circ) {
+   this.circ = circ;
+}
+</script>
+</HEAD>
+
+<BODY>
+<h1>Function</h1>                                                                     
+<script> 
+var texto = "Era uma vez...";    
+var numero = 13;                 
+var hoje = new Date();           
+var c = new Circulo(3, 4, 5);    
+var a = new Alvo(c);     
+document.write("<h2>Funções e variáveis existentes</h2>");
+document.write("<pre>function Circulo(x, y, r) {  \n");
+document.write("   this.x = x;                                    \n");
+document.write("   this.y = y;                                    \n");
+document.write("   this.r = r;                                    \n");
+document.write("}                                                 \n");
+document.write("function Alvo(circ) {                             \n");
+document.write("   this.circ = circ;                              \n");
+document.write("}                                                 \n\n");
+
+document.write("var texto = \"Era uma vez...\";    \n");
+document.write("var numero = 13;                   \n");
+document.write("var hoje = new Date();             \n");
+document.write("var c = new Circulo(3, 4, 5);      \n");      
+document.write("var a = new Alvo(c);         \n</pre>");
+
+document.write("<h3>Construtores de Objetos</h3><pre><ul>");
+document.write("<li>c.constructor                : <b>" +  c.constructor          +"</b>");
+document.write("<li>hoje.constructor        : <b>" +  hoje.constructor        +"</b>");
+document.write("<li>document.constructor   : <b>" +  document.constructor    +"</b>");
+document.write("<li>texto.constructor      : <b>" +  texto.constructor       +"</b>");
+document.write("<li>numero.constructor      : <b>" +  numero.constructor      +"</b>");
+document.write("</ul></pre>");                                                   
+                                                                                
+</script>   
+
+
+</BODY>
+
+
+</html>

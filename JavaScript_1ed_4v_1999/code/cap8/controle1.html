@@ -1,0 +1,37 @@
+<html>
+<head>
+<script>
+var janela2; // global
+var usuario = "[Freud] ";
+
+function abreJanela() {
+   if (janela2 != null) {  // janela já está aberta
+      janela2.focus();
+    } else {
+      janela2 = open("papoframe2.html");
+      abreDocs();
+   }
+}
+
+function abreDocs() {
+   janela2.frames[0].document.open();
+   parent.frames[0].document.open();
+}
+
+function enviaMensagem(msg) {
+   janela2.frames[0].document.write("<br><font color=red>" + usuario + msg + "</font>\n");
+   parent.frames[0].document.write("<br><font color=blue>" + usuario + msg + "</font>\n");
+}
+</script>
+</head>
+
+<body bgcolor=black text=white>
+<form>
+<center><p>Mensagem:
+<input type=text name=mensagem>
+<input type=button value="Enviar" onclick="enviaMensagem(this.form.mensagem.value)">
+<p><input type=button value="Arranjar Companhia" onclick="abreJanela()"> </center>
+
+</form>
+</body>
+</html>

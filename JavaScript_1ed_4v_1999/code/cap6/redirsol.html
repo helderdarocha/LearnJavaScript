@@ -1,0 +1,33 @@
+<html> <head>
+  <script language="JavaScript1.1">
+  <!--
+     browser = navigator.appName;
+     versao = parseInt(navigator.appVersion);
+     netscape = "Netscape";
+     explorer = "Microsoft Internet Explorer";
+
+     if (browser == netscape && versao >= 3) {
+        location.href = "netscape.html";
+     } else if (browser == explorer && versao >= 4) {
+        location.href = "msie.html";
+     } else {
+        location.href = "outro.html";
+     }
+  // -->
+  </script>
+</head>
+<!-- Somente browsers que não suportam JavaScript 1.1 continuarão -->
+<body>
+<h1> Bem Vindo!</h1>
+
+<script>
+    document.write("<p>O seu browser não suporta JavaScript 1.1!");
+</script>
+<noscript>
+   <p>O seu browser não suporta JavaScript ou está com o suporte a
+      JavaScript desabilitado!
+</noscript>
+
+</body>
+</html>
+

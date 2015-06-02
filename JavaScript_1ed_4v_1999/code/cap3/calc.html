@@ -1,0 +1,95 @@
+<!-- This document was created with HomeSite 2.5 -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+<HEAD>
+	<TITLE>Calculadora</TITLE>
+
+<script>
+
+var buf = "";
+var append = false;
+
+// inicializa
+function init() {
+   document.calculadora.display.value = "0";
+}
+
+// limpa o display
+function clearDisplay() {
+      document.calculadora.display.value = "0";
+      buf = "";
+}
+
+// calcula o resultado parcial e mostra no display
+function calc(op) {
+      append = false;
+      parcial = eval(buf);
+      buf = parcial + op;
+      document.calculadora.display.value = parcial;
+}
+
+// acrescenta um operando no buffer e no display
+function addOperand(operand) {
+   if (document.calculadora.display.value == "0")
+      document.calculadora.display.value == " ";
+   if (buf == "0" || buf == 0)
+      buf = "";
+   buf = buf + operand;
+   if(append == false || document.calculadora.display.value == "0") {
+      document.calculadora.display.value = operand;
+      append = true;
+   } else {
+      document.calculadora.display.value += operand;
+   }
+}
+
+// Calcula o total da expressao armazenada no buffer
+function total() {
+   var total;
+   if (append == true) {
+      total = eval(buf);
+   } else total = document.calculadora.display.value;
+   document.calculadora.display.value = total;
+}
+
+</script>
+
+</HEAD>
+
+<BODY onload="init()">
+
+<form name=calculadora>
+<table border bgcolor="silver">
+<tr><td colspan=4>
+<input type=text name=display size=10>
+<input type=button value=" C " onclick="clearDisplay()"></td></tr>
+<tr align=center>
+<td><input type=button value=" 7 " onclick="addOperand('7')"></td>
+<td><input type=button value=" 8 " onclick="addOperand('8')"></td>
+<td><input type=button value=" 9 " onclick="addOperand('9')"></td>
+<td><input type=button value=" + " onclick="calc('+')"></td>
+</tr>
+<tr align=center>
+<td><input type=button value=" 4 " onclick="addOperand('4')"></td>
+<td><input type=button value=" 5 " onclick="addOperand('5')"></td>
+<td><input type=button value=" 6 " onclick="addOperand('6')"></td>
+<td><input type=button value=" - " onclick="calc('-')"></td>
+</tr>
+<tr align=center>
+<td><input type=button value=" 1 " onclick="addOperand('1')"></td>
+<td><input type=button value=" 2 " onclick="addOperand('2')"></td>
+<td><input type=button value=" 3 " onclick="addOperand('3')"></td>
+<td><input type=button value=" * " onclick="calc('*')"></td>
+</tr>
+<tr align=center>
+<td><input type=button value=" 0 " onclick="addOperand('0')"></td>
+<td><input type=button value="   " onclick=""></td>
+<td><input type=button value=" = " onclick="total()"></td>
+<td><input type=button value=" / " onclick="calc('/')"></td>
+</tr>
+
+</table>
+</form>
+</BODY>
+</HTML>

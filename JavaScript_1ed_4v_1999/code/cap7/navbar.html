@@ -1,0 +1,19 @@
+<html>
+<head><title>NavBar</title>
+</head>
+<body>
+
+<form>
+<input type=button value="&lt; Volta"
+ onclick="opener.history.back()">
+<input type=button value="Avança &gt; "
+onclick="opener.history.forward()">
+
+Digite texto a procurar: <input type=text onchange="opener.history.go(this.value)">
+</form>
+<script>
+
+</script>
+
+</body>
+</html>

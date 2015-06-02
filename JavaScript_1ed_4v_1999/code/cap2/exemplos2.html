@@ -1,0 +1,78 @@
+<!-- This document was created with HomeSite 2.5 -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>Exemplos 2</TITLE>
+</HEAD>
+
+<BODY>
+    <h2>Tabelas</h2>
+    <table border><tr><td>
+    <script language=JavaScript>
+       document.write("<table cellpadding=0 cellspacing=0 border=0><tr>");
+       for (idx = 0; idx < 51; idx++) {
+             document.write("<td></td>");
+       }
+       document.write("</tr>");
+
+       document.write("<tr><td> America </td>");
+       for(i = 0; i < 25 ; i++) { 
+            document.write("<td align=right bgcolor=red>&nbsp;</td>");
+       }
+       document.write("<td><font face=arial size=1><b>&nbsp; 25</b></font></td></tr>");
+       
+       document.write("<tr><td></td></tr><tr><td>  Africa </td>");
+       for(i = 0; i < 35 ; i++) { 
+            document.write("<td align=right bgcolor=green>&nbsp;</td>");
+       }
+       document.write("<td><font face=arial size=1><b>&nbsp; 35</b></font></td></tr>");
+       
+       document.write("<tr><td></td></tr><tr><td> Asia </td>");
+       for(i = 0; i < 40 ; i++) { 
+            document.write("<td align=right bgcolor=orange>&nbsp;</td>");
+       }
+       document.write("<td><font face=arial size=1><b>&nbsp; 40</b></font></td></tr>");
+       
+       document.write("<tr><td></td></tr><tr><td> Europa </td>");
+       for(i = 0; i < 50 ; i++) { 
+            document.write("<td align=right bgcolor=blue>&nbsp;</td>");
+       }
+       document.write("<td><font face=arial size=1><b>&nbsp; 50</b></font></td></tr>");
+       
+       document.write("<tr><td></td></tr><tr><td> Oceania </td>");
+       for(i = 0; i < 15 ; i++) { 
+            document.write("<td align=right bgcolor=pink>&nbsp;</td>");
+       }
+       document.write("<td><font face=arial size=1><b>&nbsp; 15</b></font></td></tr></table>");
+       
+    </script>
+    </td></tr></table>
+
+    <h2>Tabelas usando Arrays</h2>
+    <table border><tr><td>
+    <script language=JavaScript>
+       document.write("<table cellspacing=0 cellpadding=0><tr>");
+       for (idx = 0; idx < 51; idx++) {
+             document.write("<td></td>");
+       }
+       document.write("</tr>");
+       
+       cores = new Array("red","green","orange","blue","pink");
+       paises = new Array("America","Africa","Asia","Europa","Oceania");
+       valores = new Array(25, 35, 40, 50, 15);
+       
+       for(m = 0; m < cores.length ; m++) {  // cores.length é comprimenro do vetor cores (5)   
+            document.write("<tr>");
+            document.write("<td> " + paises[m] + "</td>");
+            document.write("<td align=right bgcolor=" + cores[m]);
+         document.write(" colspan=" + valores[m] + "><font face=arial size=1><b>");
+         document.write(valores[m] + "</b></font></td>");
+            document.write("</tr>");
+       }
+       document.write("</table>");
+    </script>
+    </td></tr></table>
+
+</BODY>
+</HTML>

@@ -1,0 +1,67 @@
+<!-- This document was created with HomeSite 2.5 -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+<HEAD>
+	<TITLE>Habitats - utilizando javaScript e dentro de frame</TITLE>
+</HEAD>
+
+<BODY bgcolor=black link=cyan text=white>
+
+<script language=JavaScript>
+<!--
+function acende(a) {
+	imgon = new Image();
+	imgon.src = "im-0" + a + ".jpg";
+	document.images[a].src = imgon.src;
+}
+function apaga(b) {
+	imgoff = new Image();
+	imgoff.src = "impb-0" + b + ".jpg";
+	document.images[b].src = imgoff.src;
+}
+function altera(c) {
+	imgmenu = new Image;
+	imgmenu.src = "menu-0" + c + ".jpg";
+	parent.menu.document.images[0].src = imgmenu.src;
+}
+//-->
+</script>
+
+<P>
+<table cellpadding=0 cellspacing="0" border=0>
+<tr>
+<td rowspan=2>
+<img src="esquerda.jpg" width=78 height=372 border=0></td>
+<td>
+<a href="pag-01.html" onMouseOver="acende(1)" onMouseOut="apaga(1)" onClick="altera(1)">
+<img src="impb-01.jpg" name=01 width=73 height=271 border=0></a></td>
+<td>
+<a href="pag-02.html" onMouseOver="acende(2)" onMouseOut="apaga(2)" onClick="altera(3)">
+<img src="impb-02.jpg" name=02 width=104 height=271 border=0></a></td>
+<td>
+<a href="pag-03.html" onMouseOver="acende(3)" onMouseOut="apaga(3)" onClick="altera(2)">
+<img src="impb-03.jpg" name=03 width=101 height=271 border=0></a></td>
+<td>
+<a href="pag-04.html" onMouseOver="acende(4)" onMouseOut="apaga(4)" onClick="altera(4)">
+<img src="impb-04.jpg" name=04 width=106 height=271 border=0></a></td>
+<td>
+<a href="pag-05.html" onMouseOver="acende(5)" onMouseOut="apaga(5)" onClick="altera(5)">
+<img src="impb-05.jpg" name=05 width=104 height=271 border=0></a></td>
+<td rowspan=2>
+<img src="direita.jpg" width=98 height=372 border=0></td>
+</tr>
+<tr>
+<td colspan=5>
+<img src="baixo.jpg" width=488 height=101 border=0></td>
+</tr>
+</table>
+<P style="font-size: 9pt; text-align: center">
+   <a href="pag-01.html" onClick="altera(1)">[Página 1]</a> 
+   <a href="pag-02.html" onClick="altera(3)">[Página 2]</a>
+   <a href="pag-03.html" onClick="altera(2)">[Página 3]</a>
+   <a href="pag-04.html" onClick="altera(4)">[Página 4]</a>
+   <a href="pag-05.html" onClick="altera(5)">[Página 5]</a></p>
+</BODY>
+</HTML>
+

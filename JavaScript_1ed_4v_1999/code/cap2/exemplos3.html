@@ -1,0 +1,62 @@
+<!-- This document was created with HomeSite 2.5 -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>Exemplos de JavaScript</TITLE>
+</HEAD>
+
+<BODY>
+<h1>Exemplos: Introdução ao JavaScript</h1>
+
+<p><b>Exemplos de Strings, Numbers, Booleans:</b>
+<script language=JavaScript src="../cap1/biblio.js"></script>
+    
+<script language=JavaScript1.2> 
+    
+   document.write("<h3>Números</h3>");
+    d = new Date();
+    d.x = new Number(10);  // Number   
+    d.y = new Object(0x10);  // 0x10 é 16 em decimal
+   
+    m = new String("020"); // String (020 octal eh 16 em decimal)
+    n = new Object(prompt("Digite um numero", ""));
+    document.write("<p> Você digitou " + n );
+    window.x = d.x;
+    window.y = d.y;
+    d.ano = d.getYear() + 1900;
+   
+    document.write("<p> Ano " + d.ano );
+    document.write("<p> Ano " + d["ano"] );
+    document.write("<p> Ano " + d[2] );
+    b = d.x.toString();   // nos bastidores: (new Number(x)).toString()
+    c = d.y.toString();   // mesma coisa que: c = ("" + y)
+   
+    document.write("<p> m, n, x, y = " + m + ", " + n + ", " + x + ", " + y);
+    g = parseInt(m);
+    h = parseInt(n);
+   
+   document.write("<h3>Operações e conversões entre tipos</h3>");
+   texto = 1 + 2 + "três" + 4 + 5;
+   document.write ("texto = 1 + 2 + três + 4 + 5 : " + texto);
+   
+    document.write("<p>x + y = " + x + y);
+    document.write("<br> (x + y) = " + (x + y)); 
+   
+   document.write("<br> (m + y) = " + (m + y));
+   document.write("<br> (parseInt(m) + parseInt(y)) = " + (g + h));
+    
+   b1 = new Boolean(x == 10);      // Boolean (valor da expressao pode ser true ou false)
+   
+   document.write("<h3>Booleans e representação de caracteres</h3>");
+   
+    if (b1 && (y == 16)) {
+     document.write("<pre>Qualquer \'coisa\' e co\ntra\barra e \tab</pre>");
+     document.write('<pre>Qualquer \'coisa\' e co\\ntra\\barra e \\tab</pre>');
+    }  
+
+</script>
+
+<HR WIDTH="&{soma(10,15)};%" ALIGN="LEFT">
+</BODY>
+</HTML>

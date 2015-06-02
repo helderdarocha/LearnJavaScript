@@ -1,0 +1,41 @@
+<!-- This document was created with HomeSite 2.5 -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+<HEAD>
+	<TITLE>Circulos</TITLE>
+<script>
+
+// função "construtora"
+function Circulo(x, y, raio) {
+	this.x = x;
+	this.y = y;
+	this.raio = raio;
+}
+
+// criação de um método toString para o Circulo
+Circulo.prototype.toString =
+  new Function("return 'Círculo de raio ' + this.raio + ' em ('+this.x+','+this.y+')';");
+  
+// criação de um método area para o Circulo
+Circulo.prototype.area =
+  new Function("return 3.14 * this.raio * this.raio;");
+
+</script>
+</HEAD>
+
+<BODY>
+<h1>Circulos</h1>
+<script>
+c1 = new Circulo(2,2,5);	// uso da função construtora
+c2 = new Circulo(0,0,4);
+
+c2.x = 1;	// acesso a propriedades
+c2.y = 2;
+
+// uso de métodos
+document.write("<P>" + c1.toString() + " tem area " + c1.area());
+document.write("<P>" + c2.toString() + " tem area " + c2.area());
+</script>
+</BODY>
+</HTML>

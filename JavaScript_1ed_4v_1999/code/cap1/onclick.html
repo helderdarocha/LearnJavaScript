@@ -1,0 +1,60 @@
+<html>
+
+  <head>
+  <title> Exemplos de Formulários e JavaScript </title>
+  </head>
+  <body>
+  <h1>Exemplos de Formulários e JavaScript</h1>
+  <h3>Formulário 1: Evento onclick</h3>
+  
+  <form name=f1 action="exemplos.html">
+       <input type=button value=" Não aperte este botão! " 
+              onclick="alert('Nãããão!!! Tudo vai ficar vermelho!'); document.bgColor='red'">
+  </form>
+
+  <hr>
+    <h3>Formulário 2: Campos de entrada e evento onclick</h3>
+    <form>
+    
+    <p>Digite seu nome: <input type=text name=seuNome> 
+    <p>Digite sua senha: <input type=password name=suaSenha>
+    <p>Escolha uma opção:<br>
+         <input type=radio name=opcao value=viajar> Viajar<br>
+         <input type=radio name=opcao value=dormir>Dormir<br>
+         <input type=radio name=opcao value="ficar em casa">Ficar em casa assistindo TV<br>
+    <p>Escolha uma ou mais opções:<br>
+         <input type=checkbox name=livros value=sim> Levar livros<br>
+         <input type=checkbox name=rex value=sim>Levar Rex<br>
+         <input type=checkbox name=guarda-chuva value=sim>Levar guarda-chuva
+    <p>Escolha um meio de transporte:
+    <select name="Meio de Transporte">
+      <option>Avião</option>
+      <option>Ônibus</option>
+      <option>Carro</option>
+      <option>Jegue</option>
+    </select>
+    <p>Escolha um ou mais lugares:
+    <select name="Destino" multiple size=2>
+      <option value=SP>São Paulo</option>
+      <option value=RJ selected>Parati</option>
+      <option value=BA>Porto Seguro</option>
+      <option value=CE>Jericoacoara</option>
+    </select>
+    <p>Deixe uma mensagem para quem ficar:
+    <br>
+    <textarea cols=60 rows=5>
+    Digite alguma coisa aqui
+    </textarea>
+    <p><input type=submit value=Enviar>
+    <input type=reset value=Limpar>
+    <input type=button value="Tela branca outra vez...!" 
+           onclick="document.bgColor='white'">
+    
+    </form>
+    
+    <p>Visitar a 
+       <a href="javascript:if(confirm('Tem certeza?')) location.href='blocos.html'">página sobre blocos...</a>
+
+  </body>
+
+</html>

@@ -1,0 +1,47 @@
+<html>
+<head>
+<script>
+function cor(selObj) {
+   corStr = selObj.options[selObj.selectedIndex].value;
+   rgb = corStr.split(",");
+   r = parseInt(rgb[0]);
+   g = parseInt(rgb[1]);
+   b = parseInt(rgb[2]);
+   document.applets[0].mudaCor(r, g, b);
+
+}
+
+function setCoords(x, y) {
+   document.forms[0].coordx.value = x;
+   document.forms[0].coordy.value = y;
+}
+
+</script>
+</head>
+
+<body>
+<h1 align=center>Desenhos e Rabiscos 2</h1>
+<div align=center>
+<table border><tr><td align=center>
+<applet code="Desenha2.class" height=150 width=150 mayscript>
+</applet><br>
+<input type=button value="Limpa Imagem" onclick="document.applets[0].clear()"></td>
+<td align=center>
+<form>
+<p>Cor do traço:<br> 
+<select name=cores onchange="cor(this)">
+   <option value="0,0,0" selected>Preto</option>
+   <option value="255,255,255">Branco</option>
+   <option value="0,0,128">Azul Escuro</option>
+   <option value="0,0,255">Azul</option>
+   <option value="255,255,0">Amarelo</option>
+   <option value="255,0,0">Vermelho</option>
+   <option value="128,0,0">Marrom</option>
+   <option value="0,128,0">Verde Escuro</option>
+</select>
+<p>x <input type=text name=coordx size=4><br>
+y <input type=text name=coordy size=4>
+</form>
+</td></tr></table>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!-- This document was created with HomeSite 2.5 -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>Untitled</TITLE>
+<SCRIPT LANGUAGE=JavaScript>
+function envia() {
+   opener.document.f1.mensagens.value += document.f1.enviar.value + "\n";
+   document.f1.enviar.value = "";
+   opener.focus();
+}
+</SCRIPT>
+</HEAD>
+
+<BODY>
+<H1>Janela 2</H1>
+
+<FORM NAME=f1>
+<P>Mensagem a enviar:<INPUT TYPE=text NAME="enviar">
+<INPUT TYPE=button VALUE="envia" onclick="envia()">
+<p>Mensagens recebidas: <br>
+<TEXTAREA NAME="mensagens" COLS=30 ROWS=5>
+</TEXTAREA>
+</FORM>
+
+</BODY>
+</HTML>

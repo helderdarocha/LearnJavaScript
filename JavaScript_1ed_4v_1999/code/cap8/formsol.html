@@ -1,0 +1,117 @@
+<!-- This document was created with HomeSite 2.5 -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>Inscrição</TITLE>
+   <script>
+
+   var w1;
+   
+   function enviar(dados) {
+      nome     = dados.Nome.value;
+      endereco = dados.Endereco.value;
+      cep      = dados.CEP.value;
+      cidade   = dados.Cidade.value;
+      uf       = dados.UF.options[dados.UF.selectedIndex].value;
+      tel      = dados.Telefone.value;
+      carro    = dados.Veiculo.options[dados.Veiculo.selectedIndex].text;
+      
+      if (w1 != null) {
+         w1.focus();
+      } else w1 = open("", "janconf");
+      
+      w1.document.open();
+      w1.document.write("<html><head>\n<title>Confirmação</title>\n");
+      w1.document.write("</head>\n<body bgcolor=white>\n");
+      w1.document.write("<h2 align=center>Confirme sua inscrição</h2>\n");
+      w1.document.write("<form action=\"/cgi-local/inscricao.pl\">\n");
+      w1.document.write("<p>Você digitou os dados abaixo. Estão corretos?");
+      w1.document.write("<ul><li><b>Nome:</b> " + nome + "</li>\n");
+      w1.document.write("<li><b>Endereço:</b> " + endereco + "</li>\n");
+      w1.document.write("<li><b>CEP:</b> " + cep + "</li>\n");
+      w1.document.write("<li><b>Cidade:</b> " + cidade + "</li>\n");
+      w1.document.write("<li><b>Estado:</b> " + uf + "</li>\n");
+      w1.document.write("<li><b>Telefone:</b> " + tel + "</li>\n");
+      w1.document.write("<li><b>Veículo:</b> " + carro + "</li></ul>\n");
+
+      w1.document.write("<input type=hidden name=Nome value=\"" + nome + "\">\n");
+      w1.document.write("<input type=hidden name=Endereco value=\"" + endereco + "\">\n");
+      w1.document.write("<input type=hidden name=CEP value=\"" + cep + "\">\n");
+      w1.document.write("<input type=hidden name=Cidade value=\"" + cidade + "\">\n");
+      w1.document.write("<input type=hidden name=Estado value=\"" + uf + "\">\n");
+      w1.document.write("<input type=hidden name=Telefone value=\"" + tel + "\">\n");
+      w1.document.write("<input type=hidden name=Veiculo value=\"" + carro + "\">\n");
+
+      w1.document.write("<p><input type=\"button\" onclick=\"alert('inscrição enviada')\" value=\"Confirmar\">\n");
+      w1.document.write("<input type=button value=\"Corrigir\" onclick=\"opener.focus();\">\n");
+      w1.document.write("</form></body></html>\n");
+      w1.document.close();
+      w1.focus();
+   }
+   </script>
+</head>
+
+<body bgcolor=white>
+<form>
+
+<h2>Preencha o formulário abaixo</h2>
+
+<table cellspacing=0 cellpadding=0 width=100% border=0 bgcolor="#dfdfdf">
+<td>Nome</td>     <td colspan=3><input type=text name=Nome size=32></td><tr>
+<td>Endereço</td> <td colspan=3><input type=text name=Endereco size=32></td></tr>
+<tr>
+<td>CEP</td>      <td><input type=text name=CEP size=10></td>
+<td>Telefone</td> <td><input type=text name=Telefone size=10></td></tr>
+<tr>
+<td>Cidade</td>   <td><input type=text name=Cidade size=10></td>
+<td>Estado</td>   <td><select name=UF size=1 >
+                     <option value="Acre">                AC </option>
+                     <option value="Alagoas">             AL </option>
+                     <option value="Amazonas">            AM </option>
+                     <option value="Amapá">               AP </option>
+                     <option value="Bahia">               BA </option>
+                     <option value="Ceará">               CE </option>
+                     <option value="Distrito Federal">    DF </option>
+                     <option value="Espírito Santo">      ES </option>
+                     <option value="Goiás">               GO </option>
+                     <option value="Maranhão">            MA </option>
+                     <option value="Minas Gerais">        MG </option>
+                     <option value="Mato Grosso do Sul">  MS </option>
+                     <option value="Mato Grosso">         MT </option>
+                     <option value="Pará">                PA </option>
+                     <option value="Paraíba">             PB </option>
+                     <option selected value="Pernambuco"> PE </option>
+                     <option value="Piauí">               PI </option>
+                     <option value="Paraná">              PR </option>
+                     <option value="Rio Grande do Norte"> RN </option>
+                     <option value="Rio de Janeiro">      RJ </option>
+                     <option value="Rondônia">            RO </option>
+                     <option value="Roraima">             RR </option>
+                     <option value="Rio Grande do Sul">   RS </option>
+                     <option value="Sergipe">             SE </option>
+                     <option value="São Paulo">           SP </option>
+                     <option value="Santa Catarina">      SC </option>
+                     <option value="Tocantins">           TO </option>
+                  </select></td></tr>
+<tr>
+<td colspan=2>Meio de transporte:</td>
+                  <td colspan=2><select name="Veiculo">
+                     <option selected>Escolha um veículo</option>
+                     <option> Porsche 911 </option>
+                     <option> Fusca 1300 </option>
+                     <option> BMW 360i </option>
+                     <option> Trabant 1987 </option>
+                     <option> Jegue e carroça </option>
+                  </select></td></tr>
+<tr>
+<td align=center colspan=4><br>
+<input type=button value="Enviar Dados" onclick="enviar(this.form)">
+<br>&nbsp;</td></tr>
+</table>
+
+</form>
+
+</body>
+</html>
+

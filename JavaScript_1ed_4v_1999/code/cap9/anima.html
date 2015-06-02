@@ -1,0 +1,41 @@
+<html>
+<head>
+<script>
+
+var imagens;
+
+prefixo = "im-0";
+sufixo = ".jpg";
+numImagens = 5;
+posicao = 0;
+
+function carregaImagens() {
+
+   imagens = new Array(numImagens);
+
+   for (i = 0; i < imagens.length ; i++) {
+      imagens[i] = new Image();
+      imagens[i].src = prefixo + (i+1) + sufixo;
+   }
+   troca();
+}
+
+function troca() {
+   indice = 0;
+
+   if (posicao < imagens.length) {
+      indice = posicao++;
+   } else {
+      posicao = 0;
+   }       
+   document.images[0].src = prefixo + (indice + 1) + sufixo;
+   setTimeout("troca()", 1000);
+
+}
+</script>
+</head>
+
+<body onload="carregaImagens()">
+<img src="impb-05.jpg">
+</body>
+</html>

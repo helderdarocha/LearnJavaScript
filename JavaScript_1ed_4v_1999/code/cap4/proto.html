@@ -1,0 +1,74 @@
+<html>
+
+<HEAD> <TITLE>TypeOf</TITLE>
+<script>
+function Circulo(x, y, r) {      // função "construtora"
+   this.x = x; // definição das propriedades deste objeto
+   this.y = y; // a referência this é ponteiro para o próprio objeto
+   this.r = r;
+}
+function Alvo(circ) {
+   this.circ = circ;
+}
+</script>
+</HEAD>
+
+<BODY>
+<h1>Usando TypeOf</h1>                                                                     
+<a href="x.html">link</a>
+
+<script> 
+var coisa; 
+var outraCoisa = new Object();                      
+var texto = "Era uma vez...";    
+var numero = 13;                 
+var hoje = new Date();           
+var c = new Circulo(3, 4, 5);    
+var a = new Alvo(c);     
+document.write("<h2>Funções e variáveis existentes</h2>");
+document.write("<pre>function Circulo(x, y, r) {  \n");
+document.write("   this.x = x;                                    \n");
+document.write("   this.y = y;                                    \n");
+document.write("   this.r = r;                                    \n");
+document.write("}                                                 \n");
+document.write("function Alvo(circ) {                             \n");
+document.write("   this.circ = circ;                              \n");
+document.write("}                                                 \n\n");
+
+document.write("var coisa;                         \n");
+document.write("var outraCoisa = new Object();     \n");
+document.write("var texto = \"Era uma vez...\";    \n");
+document.write("var numero = 13;                   \n");
+document.write("var hoje = new Date();             \n");
+document.write("var c = new Circulo(3, 4, 5);      \n");      
+document.write("var a = new Alvo(c);         \n</pre>");
+
+document.write("<h3>Nomes dos Construtores de Objetos</h3><pre><ul>");
+document.write("<li>c.constructor.name           : <b>" +  c.constructor.name           +"</b>");
+document.write("<li>hoje.constructor.name        : <b>" +  hoje.constructor.name        +"</b>");
+document.write("<li>window.constructor.name      : <b>" +  window.constructor.name      +"</b>");
+document.write("<li>document.constructor.name    : <b>" +  document.constructor.name    +"</b>");
+document.write("<li>history.constructor.name     : <b>" +  history.constructor.name     +"</b>");
+document.write("<li>texto.constructor.name       : <b>" +  texto.constructor.name       +"</b>");
+document.write("<li>numero.constructor.name      : <b>" +  numero.constructor.name      +"</b>");
+document.write("<li>Math.constructor.name        : <b>" +  Math.constructor.name        +"</b>");
+document.write("<li>Function.constructor.name    : <b>" +  Function.constructor.name    +"</b>");
+document.write("<li>Number.constructor.name      : <b>" +  Number.constructor.name    +"</b>");
+document.write("<li>document.links[0].constructor.name: <b>" + document.links[0].constructor.name +"</b>");
+document.write("</ul></pre>");             
+
+document.write("<h3>Nomes dos Construtores de Objetos</h3><pre><ul>");
+document.write("<li>c.constructor                : <b>" +  c.constructor          +"</b>");
+document.write("<li>hoje.constructor        : <b>" +  hoje.constructor        +"</b>");
+document.write("<li>document.constructor   : <b>" +  document.constructor    +"</b>");
+document.write("<li>texto.constructor      : <b>" +  texto.constructor       +"</b>");
+document.write("<li>numero.constructor      : <b>" +  numero.constructor      +"</b>");
+document.write("</ul></pre>");                                                   
+                                                                                
+</script>   
+
+
+</BODY>
+
+
+</html>

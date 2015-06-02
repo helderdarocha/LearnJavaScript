@@ -1,0 +1,38 @@
+<html>
+
+<HEAD> <TITLE>Circulos</TITLE>
+<script>
+
+<!-- método -->
+function metodoToString() {
+   return "raio: " + this.r + " (" + this.x + "," + this.y + ")";
+}
+
+function Circulo(x, y, r) {      // função "construtora"
+   this.x = x; // definição das propriedades deste objeto
+   this.y = y; // a referência this é ponteiro para o próprio objeto
+   this.r = r;
+   this.toString = metodoToString;  // acrescenta método toString()
+}
+
+</script>
+</HEAD>
+
+<BODY>
+<h1>Circulos usando métodos (ex 3.3)</h1>
+<script>
+c1 = new Circulo(2,2,5);   // uso da função construtora
+c2 = new Circulo(0,0,4); // para criar dois circulos
+
+c2.x = 1;    // definicao de propriedades ...usando o operador "."
+c2["y"] = 2;    // ... usando o vetor associativo
+
+// uso de propriedades
+document.write("<P>c1: " + c1.toString());
+document.write("<P>c2: " + c2.toString());
+</script>
+
+</BODY>
+
+
+</html>

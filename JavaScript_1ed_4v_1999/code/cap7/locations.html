@@ -1,0 +1,23 @@
+<html>
+
+  <head></head>
+
+  <body>
+
+<p> Link para <a href="browsers.html">Browsers</a>
+<form>
+<p>Referrer: Você veio de
+<script>
+document.write(document.referrer + "<br>");
+</script>
+<p>Location: <input type=text name=loc>
+<input type=button value="Abrir" onclick="location.href=this.form.loc.value">
+<p><input type=button value="Reload" onclick="location.reload()">
+<br><input type=button value="Volta" onclick="history.go(-1)">
+<br><input type=button value="Avança" onclick="history.go(+1)">
+
+</form>
+
+</body>
+
+</html>

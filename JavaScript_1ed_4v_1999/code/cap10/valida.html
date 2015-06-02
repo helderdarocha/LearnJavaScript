@@ -1,0 +1,38 @@
+<!-- This document was created with HomeSite 2.5 -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>Validação</TITLE>
+   
+<script>
+function valida(f) {
+  var valid = true;
+  if (f.nome.value.length <= 0) valid = false;
+  else {
+     for (i = 0;  i < f.nome.value.length;  i++) {
+        ch = f.nome.value.charAt(i).toLowerCase(); 
+        if (ch < 'a' || ch > 'z') valid = false;
+     }
+  }
+  if (!valid) {
+    alert("Só digite letras (sem acentos) no campo \"Seu Nome\".");
+    f.nome.focus();
+    f.nome.select();
+    return (false);
+  } else {
+   alert("Dados enviados corretamete");
+  }
+}
+</script>
+</HEAD>
+
+<BODY>
+<FORM>
+<P>Digite seu Nome:  
+<INPUT TYPE="TEXT" SIZE="20" NAME="nome"> 
+<P><INPUT TYPE="button" VALUE="Enviar" onclick="valida(this.form)">
+</FORM>
+
+</BODY>
+</HTML>

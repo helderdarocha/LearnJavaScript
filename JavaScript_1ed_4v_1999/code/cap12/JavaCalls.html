@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>LiveConnect (Netscape-only)</title>
+</head>
+
+<body>
+<h1>LiveConnect (Netscape-only)</h1>
+<h3>Uso de Java diretamente via browser:</h3>
+<pre>
+txt = "a;b;c d;e;f";
+st = new java.util.StringTokenizer(txt, " ;");
+document.write("&lt;p>" + st.nextToken());
+document.write("&lt;p>" + st.nextToken());
+document.write("&lt;p>" + st.nextToken());
+</pre>
+
+<h3>Resultados</h3>
+<script>
+
+txt = "a;b;c d;e;f";
+st = new java.util.StringTokenizer(txt, " ;");
+document.write("<p>" + st.nextToken());
+document.write("<p>" + st.nextToken());
+document.write("<p>" + st.nextToken());
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<html>
+<head>
+<script>
+function cor(selObj) {
+   corStr = selObj.options[selObj.selectedIndex].value;
+   rgb = corStr.split(",");
+   r = parseInt(rgb[0]);
+   g = parseInt(rgb[1]);
+   b = parseInt(rgb[2]);
+   if (selObj.name == "bg") {
+      document.applets[0].corDeFundo(r, g, b);
+   } else if (selObj.name == "fg") { 
+      document.applets[0].corDoTexto(r, g, b);
+   }
+}
+
+</script>
+</head>
+
+<body>
+<h1 align=center>Banner Interativo</h1>
+
+<applet code="Banner.class" height=20 width=450 name="bann">
+<param name="msg" value="Bom Dia!">
+</applet>
+<form>
+<p>Texto:
+<input type=text name=novotexto size=45>
+<input type=button value="Alterar" onclick="document.applets[0].mensagem(this.form.novotexto.value)">
+<p>Cor de fundo:
+<select name=bg onchange="cor(this)">
+   <option value="0,0,0">Preto</option>
+   <option value="255,255,255">Branco</option>
+   <option value="0,0,128">Azul Escuro</option>
+   <option value="0,0,255" selected>Azul</option>
+   <option value="255,255,0">Amarelo</option>
+   <option value="255,0,0">Vermelho</option>
+   <option value="128,0,0">Marrom</option>
+   <option value="0,128,0">Verde Escuro</option>
+</select>
+
+Cor do texto:
+<select name=fg onchange="cor(this)">
+   <option value="0,0,0">Preto</option>
+   <option value="255,255,255">Branco</option>
+   <option value="0,0,128">Azul Escuro</option>
+   <option value="0,0,255">Azul</option>
+   <option value="255,255,0" selected>Amarelo</option>
+   <option value="255,0,0">Vermelho</option>
+   <option value="128,0,0">Marrom</option>
+   <option value="0,128,0">Verde Escuro</option>
+</select>
+
+<input type=button value="&lt;&lt;" onclick="document.applets[0].esquerda()">
+<input type=button value="[  ]" onclick="document.applets[0].para()">
+<input type=button value="&gt;&gt;" onclick="document.applets[0].direita()">
+
+<p><input type=button value="Test" onclick="x()">
+</form>
+
+<script>
+
+function x() {
+
+n = document.applets[0].name;
+
+alert("H " + h + "\nW " + w + "\nCODE " + c + "\nNAME " + n);
+
+}
+
+</script>
+</body>
+</html>

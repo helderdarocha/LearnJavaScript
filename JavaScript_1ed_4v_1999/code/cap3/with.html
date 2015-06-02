@@ -1,0 +1,35 @@
+<!-- This document was created with HomeSite 2.5 -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<html>
+<head>
+  <title>Trigonometria com With</title>
+<script language=JavaScript>
+<!--
+function trig(type) {
+  with (document.f1) {
+    if (type == "cos") {
+      x.value = Math.cos(parseInt(x.value) * (Math.PI / 180));
+    } else if (type == "sin") {
+      x.value = Math.sin(parseInt(x.value) * (Math.PI / 180));
+    } else if (type == "tan") {
+      x.value = Math.tan(parseInt(x.value) * (Math.PI / 180));
+    }
+  }
+}
+//-->
+</script>
+
+</head>
+<body>
+<h1>Trigonometria com With</h1>
+<form name="f1">
+   <input type=text name=x size=20>
+   <input type=button value=" C " onclick="this.form.x.value=''"><br>
+   <input type=button value=" cos(x) " onclick="trig('cos')">
+   <input type=button value=" sin(x) " onclick="trig('sin')">
+   <input type=button value=" tan(x) " onclick="trig('tan')">
+</form>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!-- This document was created with HomeSite 2.5 -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+<HEAD>
+   <TITLE>Objetos JavaScript</TITLE>
+</HEAD>
+
+<BODY>
+<h1>Objetos JavaScript</h1>
+
+<h3>Exemplos de Strings, Numbers, Booleans:</h3>
+<p>Veja código-fonte!
+<script language=JavaScript src="../cap1/biblio.js"></script>
+    
+<script language=JavaScript1.2> 
+    
+   document.write("<h4>Números, Objetos e Propriedades</h4>");
+    d = new Date();
+    d.x = new Number(10);  // Number como propriedade de 'd'  
+    d.y = new Object(0x10);  // 0x10 é 16 em decimal
+   
+    m = new String("020"); // String (020 octal eh 16 em decimal)
+    n = new Object(prompt("Digite um numero", ""));
+    
+    document.write("<p> Você digitou " + n );
+    
+    b = d.x.toString();   // nos bastidores: (new Number(x)).toString()
+    c = d.y.toString();   // mesma coisa que: c = ("" + y)
+    
+    window.x = d.x;    // x e y agora tambem sao propriedades globais
+    window.y = d.y;
+    
+    d.ano = d.getYear() + 1900;
+    document.write("<p> Ano " + d.ano );
+    document.write("<br> Ano " + d["ano"] );
+    
+    args = soma.length;
+    document.write("<p> A função soma tem " + args + " argumentos.");
+   
+</script>
+
+<!-- este recurso &{ javascript };  só funciona em Netscape! -->
+
+<HR WIDTH="&{soma(10,15)};%" ALIGN="LEFT">
+
+</BODY>
+</HTML>

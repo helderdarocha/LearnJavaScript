@@ -1,0 +1,140 @@
+<html>
+
+<head>
+
+<script>
+
+var buf = "";
+var memBuf = "";
+var append = false;
+
+// inicializa
+function init() {
+   document.calculadora.display.value = "0";
+}
+
+// transporta
+function passData() {
+	opener.document.calculos.massa.value = document.calculadora.display.value;
+	close();
+}
+
+// salva na memoria ou adiciona
+function memPlus(subst) {
+	if (subst) {
+		memBuf = parseFloat(document.calculadora.display.value);
+	} else {
+	    memBuf += + parseFloat(document.calculadora.display.value);
+	}
+}
+
+// limpa memoria
+function memClr() {
+	memBuf = 0;
+}
+
+// recupera memoria
+function memGet() {
+	document.calculadora.display.value = memBuf.toString();
+	if (append == false) {
+		buf = eval(buf += memBuf);
+		append = true;
+	}
+	append = false;
+}
+
+// recupera memoria
+function trocaSinal() {
+	document.calculadora.display.value = - parseFloat(document.calculadora.display.value);
+}
+
+// limpa o display
+function clearDisplay() {
+      document.calculadora.display.value = "0";
+      buf = "";
+}
+
+// calcula o resultado parcial e mostra no display
+function calc(op) {
+      append = false;
+      parcial = eval(buf);
+      buf = parcial + op;
+      document.calculadora.display.value = parcial;
+}
+
+// acrescenta um operando no buffer e no display
+function addOperand(operand) {
+   if (document.calculadora.display.value == "0")
+      document.calculadora.display.value == " ";
+   if (buf == "0" || buf == 0)
+      buf = "";
+   buf = buf + operand;
+   if(append == false || document.calculadora.display.value == "0") {
+      document.calculadora.display.value = operand;
+      append = true;
+   } else {
+      document.calculadora.display.value += operand;
+   }
+}
+
+// Calcula o total da expressao armazenada no buffer
+function total() {
+   var total;
+   if (append == true) {
+      total = eval(buf);
+   } else total = document.calculadora.display.value;
+   document.calculadora.display.value = total;
+}
+
+</script>
+
+
+
+</head>
+
+
+<body onload="init()" onblur="focus()">
+
+<form name=calculadora>
+<table border bgcolor="silver">
+<tr><td colspan=5>
+<input type=text name=display size=15>
+<input type=button value=" C " onclick="clearDisplay()"></td></tr>
+<tr align=center>
+<td><input type=button value=" 7 " onclick="addOperand('7')"></td>
+<td><input type=button value=" 8 " onclick="addOperand('8')"></td>
+<td><input type=button value=" 9 " onclick="addOperand('9')"></td>
+<td><input type=button value=" + " onclick="calc('+')"></td>
+<td><input type=button value=" MR " onclick="memGet()"></td>
+</tr>
+<tr align=center>
+<td><input type=button value=" 4 " onclick="addOperand('4')"></td>
+<td><input type=button value=" 5 " onclick="addOperand('5')"></td>
+<td><input type=button value=" 6 " onclick="addOperand('6')"></td>
+<td><input type=button value=" - " onclick="calc('-')"></td>
+<td><input type=button value=" MC " onclick="memClr()"></td>
+</tr>
+<tr align=center>
+<td><input type=button value=" 1 " onclick="addOperand('1')"></td>
+<td><input type=button value=" 2 " onclick="addOperand('2')"></td>
+<td><input type=button value=" 3 " onclick="addOperand('3')"></td>
+<td><input type=button value=" * " onclick="calc('*')"></td>
+<td><input type=button value=" MS " onclick="memPlus(true)"></td>
+</tr>
+<tr align=center>
+<td><input type=button value=" 0 " onclick="addOperand('0')"></td>
+<td><input type=button value=" . " onclick="addOperand('.')"></td>
+<td><input type=button value="+/-" onclick="trocaSinal()"></td>
+<td><input type=button value=" / " onclick="calc('/')"></td>
+<td><input type=button value=" M+ " onclick="memPlus(false)"></td>
+</tr>
+<tr align=center>
+<td colspan=4><input type=button value="Transportar" onclick="passData()"></td>
+<td><input type=button value="   =   " onclick="calc('=')"></td>
+</tr>
+
+</table>
+</form>
+
+</body>
+</html>

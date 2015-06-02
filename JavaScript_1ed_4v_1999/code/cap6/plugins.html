@@ -1,0 +1,32 @@
+<html>
+
+<HEAD> <TITLE>Plug-Ins</TITLE>
+</HEAD>
+
+<BODY>
+<h1>Plug-Ins</h1>
+
+<script>  
+numPlugins = navigator.plugins.length;
+document.write("<p>Plug-ins instalados: " + numPlugins);
+
+if (numPlugins > 0) {
+   for (i = 0; i < numPlugins; i++)  {
+      document.write("<p><b>Nome: </b>" + navigator.plugins[i].name);
+           
+      document.writeln("<br><b>Arquivo: </b>");
+      document.write(navigator.plugins[i].filename);
+      document.write("<br><b>Descrição: </b>");
+      document.write(navigator.plugins[i].description);
+      document.write("<br><b>Qte. de tipos MIME suportados: </b>");
+      document.write(navigator.plugins[i].length);
+
+   }
+}
+document.write(navigator.taintEnabled());
+
+</script>
+</BODY>
+
+
+</html>
